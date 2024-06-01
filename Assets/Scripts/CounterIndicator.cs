@@ -4,10 +4,9 @@ using UnityEngine.UI;
 public class CounterIndicator : MonoBehaviour
 {
     [SerializeField] private Text _amountText;
-    [SerializeField] private Counter _counter;
 
-    private void Update()
+    public void SetAmount(int amount)
     {
-        _amountText.text = _counter.Amount.ToString();
+        _amountText.text = amount.ToString();
     }
 }

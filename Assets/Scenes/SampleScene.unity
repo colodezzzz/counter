@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _amountText: {fileID: 663473622}
-  _counter: {fileID: 180782042}
 --- !u!114 &180782042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToCount: 0.5
+  _indicator: {fileID: 180782041}
 --- !u!4 &180782043
 Transform:
   m_ObjectHideFlags: 0

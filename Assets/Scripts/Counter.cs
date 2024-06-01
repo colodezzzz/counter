@@ -6,17 +6,19 @@ public class Counter : MonoBehaviour
     private const int MouseButtonNumber = 0;
 
     [SerializeField, Tooltip("Time to count in seconds")] private float _timeToCount;
+    [Space]
+    [SerializeField] private CounterIndicator _indicator;
 
     private int _amount;
     private WaitForSeconds _waitTime;
     private Coroutine _countingCoroutine;
     private bool _isCounting;
 
-    public int Amount => _amount;
-
     private void Awake()
     {
         _waitTime = new WaitForSeconds(_timeToCount);
+        _amount = 0;
+        _indicator.SetAmount(_amount);
     }
 
     private void Update()
@@ -60,6 +62,7 @@ public class Counter : MonoBehaviour
             yield return _waitTime;
 
             _amount++;
+            _indicator.SetAmount(_amount);
         }
     }
 }
